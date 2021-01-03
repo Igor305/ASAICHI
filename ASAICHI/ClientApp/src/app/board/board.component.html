@@ -1,0 +1,111 @@
+<p *ngIf="!boards"><em>Loading...</em></p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <td colspan="2" class="blueСolumn">Показник</td>
+      <td class="st" class="blueСolumn">Ціль</td>
+      <td class="unimportantDays">{{this.dates[6]}}</td>
+      <td class="unimportantDays">{{this.dates[5]}}</td>
+      <td class="unimportantDays">{{this.dates[4]}}</td>
+      <td class="unimportantDays">{{this.dates[3]}}</td>
+      <td class="unimportantDays">{{this.dates[2]}}</td>
+      <td class="importantDays">{{this.dates[1]}}</td>
+      <td class="importantDays">{{this.dates[0]}}</td>
+      <td class="blueСolumn">Ціль на тиждень</td>
+      <td class="blueСolumn">Рез-т за мин. тиждень</td>
+    </tr>
+  </thead>
+  <tr *ngFor="let board of boards"> 
+    <td>{{board.num}}</td>
+    <td>{{board.indicator}}</td>
+    <td class="aquaСolumn">
+      <div *ngIf="this.board.target < 0; else elseBlockTarget">план ⩽факт</div>
+      <ng-template #elseBlockTarget>
+        ⩽{{board.target}}<div *ngIf="this.board.num < 4">%</div>
+      </ng-template>
+    </td>
+    <td>
+      <div *ngIf="this.board.target < 1; else elseBlock17" [ngStyle]="{'color':'red'}">
+        <div *ngIf="this.board.day7 > this.board.target; else elseBlock7" [ngStyle]="{'color':'red'}">
+          {{board.day7}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+        </div>
+        <ng-template #elseBlock7>
+          <div [ngStyle]="{'color':'green'}">
+            {{board.day7}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+          </div>
+        </ng-template>
+    </td>
+    <td>
+      <div *ngIf="this.board.day6 > this.board.target; else elseBlock6" [ngStyle]="{'color':'red'}">
+        {{board.day6}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+      </div>
+      <ng-template #elseBlock6>
+        <div [ngStyle]="{'color':'green'}">
+          {{board.day6}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+        </div>
+      </ng-template>
+    </td>
+    <td>
+      <div *ngIf="this.board.day5 > this.board.target; else elseBlock5" [ngStyle]="{'color':'red'}">
+        {{board.day5}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+      </div>
+      <ng-template #elseBlock5>
+        <div [ngStyle]="{'color':'green'}">
+          {{board.day5}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+        </div>
+      </ng-template>
+    </td>
+    <td>
+      <div *ngIf="this.board.day4 > this.board.target; else elseBlock4" [ngStyle]="{'color':'red'}">
+        {{board.day4}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+      </div>
+      <ng-template #elseBlock4>
+        <div [ngStyle]="{'color':'green'}">
+          {{board.day4}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+        </div>
+      </ng-template>
+    </td>
+    <td>
+      <div *ngIf="this.board.day3 > this.board.target; else elseBlock3" [ngStyle]="{'color':'red'}">
+        {{board.day3}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+      </div>
+      <ng-template #elseBlock3>
+        <div [ngStyle]="{'color':'green'}">
+          {{board.day3}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+        </div>
+      </ng-template>
+    </td>
+    <td>
+      <div *ngIf="this.board.day2 > this.board.target; else elseBlock2" [ngStyle]="{'color':'red'}">
+        {{board.day2}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+      </div>
+      <ng-template #elseBlock2>
+        <div [ngStyle]="{'color':'green'}">
+          {{board.day2}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+        </div>
+      </ng-template>
+    </td>
+    <td>
+      <div *ngIf="this.board.today > this.board.target; else elseBlock1" [ngStyle]="{'color':'red'}">
+        {{board.today}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+      </div>
+      <ng-template #elseBlock1>
+        <div [ngStyle]="{'color':'green'}">
+          {{board.today}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+        </div>
+      </ng-template>
+    </td>
+    <td class="aquaСolumn">⩽{{board.targetForTheWeek}}<ng-template [ngIf]="this.board.num < 4">%</ng-template></td>
+    <td>
+      <div *ngIf="this.board.result > this.board.targetForTheWeek; else elseBlock10" [ngStyle]="{'color':'red'}">
+        {{board.result}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+      </div>
+      <ng-template #elseBlock10>
+        <div [ngStyle]="{'color':'green'}">
+          {{board.result}}<ng-template [ngIf]="this.board.num < 4">%</ng-template>
+        </div>
+      </ng-template>
+    </td>
+  </tr>
+</table>

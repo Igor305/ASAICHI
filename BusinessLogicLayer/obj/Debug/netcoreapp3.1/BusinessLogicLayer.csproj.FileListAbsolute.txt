@@ -1,0 +1,9 @@
+D:\Clown\.Net\ASAICHI\v2\ASAICHI\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.csprojAssemblyReference.cache
+D:\Clown\.Net\ASAICHI\v2\ASAICHI\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.AssemblyInfoInputs.cache
+D:\Clown\.Net\ASAICHI\v2\ASAICHI\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.AssemblyInfo.cs
+D:\Clown\.Net\ASAICHI\v2\ASAICHI\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\Clown\.Net\ASAICHI\v2\ASAICHI\BusinessLogicLayer\bin\Debug\netcoreapp3.1\BusinessLogicLayer.deps.json
+D:\Clown\.Net\ASAICHI\v2\ASAICHI\BusinessLogicLayer\bin\Debug\netcoreapp3.1\BusinessLogicLayer.dll
+D:\Clown\.Net\ASAICHI\v2\ASAICHI\BusinessLogicLayer\bin\Debug\netcoreapp3.1\BusinessLogicLayer.pdb
+D:\Clown\.Net\ASAICHI\v2\ASAICHI\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.dll
+D:\Clown\.Net\ASAICHI\v2\ASAICHI\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.pdb

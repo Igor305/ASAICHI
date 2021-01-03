@@ -1,0 +1,26 @@
+td {
+  text-align: center;
+  vertical-align: middle;
+  border: 3px solid black;
+  padding: 5px;
+}
+div {
+  display: inline;
+}
+.unimportantDays {
+  background-color: rgb(178, 199, 240)
+}
+
+.importantDays {
+  background-color: rgb(67, 108, 185)
+}
+
+.blueСolumn {
+  background-color: blue;
+  color: white;
+}
+
+.aquaСolumn {
+  background-color: rgb(126, 171, 255);
+  color: blue;
+}

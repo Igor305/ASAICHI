@@ -1,2 +1,0 @@
-# ASAICHI
-test
